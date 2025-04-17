@@ -1,0 +1,9 @@
+/home/pi/httptc/main/mlx90614.c: In function 'mlx90614_read_temp':
+/home/pi/httptc/main/mlx90614.c:11:21: error: implicit declaration of function 'esp_random'; did you mean 'srandom'? [-Wimplicit-function-declaration]
+   11 |     *temp = 25.0 + (esp_random() % 1000) / 100.0;  // Simulated value
+      |                     ^~~~~~~~~~
+      |                     srandom
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:95: esp-idf/main/CMakeFiles/__idf_main.dir/mlx90614.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:6135: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [Makefile:149: all] Error 2

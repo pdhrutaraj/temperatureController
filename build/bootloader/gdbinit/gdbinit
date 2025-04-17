@@ -1,0 +1,2 @@
+source /home/pi/httptc/build/bootloader/gdbinit/symbols
+source /home/pi/httptc/build/bootloader/gdbinit/connect

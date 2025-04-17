@@ -1,0 +1,31 @@
+/home/pi/httptc/main/mlx90614.c: In function 'mlx90614_read_temp':
+/home/pi/httptc/main/mlx90614.c:10:21: error: implicit declaration of function 'esp_random'; did you mean 'srandom'? [-Wimplicit-function-declaration]
+   10 |     *temp = 25.0 + (esp_random() % 1000) / 100.0;  // Simulated value
+      |                     ^~~~~~~~~~
+      |                     srandom
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:95: esp-idf/main/CMakeFiles/__idf_main.dir/mlx90614.c.obj] Error 1
+make[2]: *** Waiting for unfinished jobs....
+/home/pi/httptc/main/web_server.c: In function 'start_webserver':
+/home/pi/httptc/main/web_server.c:59:9: warning: missing initializer for field 'user_ctx' of 'httpd_uri_t' {aka 'struct httpd_uri'} [-Wmissing-field-initializers]
+   59 |         httpd_register_uri_handler(server, &(httpd_uri_t){"/", HTTP_GET, index_get});
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/pi/httptc/main/web_server.h:4,
+                 from /home/pi/httptc/main/web_server.c:1:
+/home/pi/esp32/esp-idf/components/esp_http_server/include/esp_http_server.h:439:11: note: 'user_ctx' declared here
+  439 |     void *user_ctx;
+      |           ^~~~~~~~
+/home/pi/httptc/main/web_server.c:60:9: warning: missing initializer for field 'user_ctx' of 'httpd_uri_t' {aka 'struct httpd_uri'} [-Wmissing-field-initializers]
+   60 |         httpd_register_uri_handler(server, &(httpd_uri_t){"/set", HTTP_POST, temp_post});
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/pi/esp32/esp-idf/components/esp_http_server/include/esp_http_server.h:439:11: note: 'user_ctx' declared here
+  439 |     void *user_ctx;
+      |           ^~~~~~~~
+/home/pi/httptc/main/web_server.c:61:9: warning: missing initializer for field 'user_ctx' of 'httpd_uri_t' {aka 'struct httpd_uri'} [-Wmissing-field-initializers]
+   61 |         httpd_register_uri_handler(server, &(httpd_uri_t){"/data", HTTP_GET, data_get});
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/pi/esp32/esp-idf/components/esp_http_server/include/esp_http_server.h:439:11: note: 'user_ctx' declared here
+  439 |     void *user_ctx;
+      |           ^~~~~~~~
+make[1]: *** [CMakeFiles/Makefile2:6135: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [Makefile:149: all] Error 2
