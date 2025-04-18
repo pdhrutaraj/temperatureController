@@ -1,0 +1,21 @@
+/home/pi/httptc/main/web_server.c: In function 'start_webserver':
+/home/pi/httptc/main/web_server.c:93:9: warning: missing initializer for field 'user_ctx' of 'httpd_uri_t' {aka 'struct httpd_uri'} [-Wmissing-field-initializers]
+   93 |         httpd_register_uri_handler(server, &(httpd_uri_t){"/", HTTP_GET, index_get});
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/pi/httptc/main/web_server.h:4,
+                 from /home/pi/httptc/main/web_server.c:1:
+/home/pi/esp32/esp-idf/components/esp_http_server/include/esp_http_server.h:439:11: note: 'user_ctx' declared here
+  439 |     void *user_ctx;
+      |           ^~~~~~~~
+/home/pi/httptc/main/web_server.c:94:9: warning: missing initializer for field 'user_ctx' of 'httpd_uri_t' {aka 'struct httpd_uri'} [-Wmissing-field-initializers]
+   94 |         httpd_register_uri_handler(server, &(httpd_uri_t){"/set", HTTP_POST, temp_post});
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/pi/esp32/esp-idf/components/esp_http_server/include/esp_http_server.h:439:11: note: 'user_ctx' declared here
+  439 |     void *user_ctx;
+      |           ^~~~~~~~
+/home/pi/httptc/main/web_server.c:95:9: warning: missing initializer for field 'user_ctx' of 'httpd_uri_t' {aka 'struct httpd_uri'} [-Wmissing-field-initializers]
+   95 |         httpd_register_uri_handler(server, &(httpd_uri_t){"/data", HTTP_GET, data_get});
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/pi/esp32/esp-idf/components/esp_http_server/include/esp_http_server.h:439:11: note: 'user_ctx' declared here
+  439 |     void *user_ctx;
+      |           ^~~~~~~~

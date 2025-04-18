@@ -14,8 +14,8 @@ void wifi_init_softap(void) {
 
     wifi_config_t wifi_config = {
         .ap = {
-            .ssid = "ESP32_TempCtrl",
-            .ssid_len = strlen("ESP32_TempCtrl"),
+            .ssid = "TemperatureController",
+            .ssid_len = strlen("TemperatureController"),
             .max_connection = 4,
             .authmode = WIFI_AUTH_OPEN,
         },
@@ -25,5 +25,5 @@ void wifi_init_softap(void) {
     ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_AP, &wifi_config));
     ESP_ERROR_CHECK(esp_wifi_start());
 
-    ESP_LOGI("wifi_ap", "AP started with SSID: ESP32_TempCtrl");
+    ESP_LOGI("wifi_ap", "AP started with SSID: TemperatureController");
 }
