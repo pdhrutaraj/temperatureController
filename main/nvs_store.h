@@ -3,7 +3,7 @@
 
 #include "esp_err.h"
 
-esp_err_t save_target_temp(float temp);
-esp_err_t load_target_temp(float *temp);
+void save_config_to_nvs(float temp,int output_delay_ms);
+void load_config_from_nvs(float *temp,int *output_delay_ms);
 
 #endif

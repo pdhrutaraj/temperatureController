@@ -1,0 +1,339 @@
+AM OP enabled
+[0;32mI (651) w�ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1050-gb5ac4fbdf9 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr 18 2025 06:40:07[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1cb90h (117648) map[0m
+[0;32mI (128) esp_image: segment 1: paddr=0002cbb8 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (128) esp_image: segment 2: paddr=0002cbdc vaddr=3ffb0000 size=0343ch ( 13372) load[0m
+[0;32mI (137) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=8eda4h (585124) map[0m
+[0;32mI (339) esp_image: segment 4: paddr=000bedcc vaddr=3ffb343c size=00b3ch (  2876) load[0m
+[0;32mI (341) esp_image: segment 5: paddr=000bf910 vaddr=40080000 size=18da8h (101800) load[0m
+[0;32mI (395) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (395) boot: Disabling RNG early entropy source...[0m
+[0;32mI (405) cpu_start: Multicore app[0m
+[0;32mI (414) cpu_start: Pro cpu start user code[0m
+[0;32mI (414) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (414) app_init: Application information:[0m
+[0;32mI (414) app_init: Project name:     httptc[0m
+[0;32mI (418) app_init: App version:      3f2a030-dirty[0m
+[0;32mI (422) app_init: Compile time:     Apr 18 2025 06:42:31[0m
+[0;32mI (427) app_init: ELF file SHA256:  057bf71c6...[0m
+[0;32mI (431) app_init: ESP-IDF:          v5.5-dev-1050-gb5ac4fbdf9[0m
+[0;32mI (437) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (441) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (445) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (449) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (455) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (460) heap_init: At 3FFB8200 len 00027E00 (159 KiB): DRAM[0m
+[0;32mI (465) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (471) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (476) heap_init: At 40098DA8 len 00007258 (28 KiB): IRAM[0m
+[0;32mI (483) spi_flash: detected chip: generic[0m
+[0;32mI (485) spi_flash: flash io: dio[0m
+[0;33mW (488) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (500) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (511) main_task: Started on CPU0[0m
+[0;32mI (521) main_task: Calling app_main()[0m
+[0;32mI (571) wifi:wifi driver task: 3ffc0394, prio:23, stack:6656, core=0[0m
+[0;32mI (581) wifi:wifi firmware version: 34d97ea27[0m
+[0;32mI (581) wifi:wifi certification version: v7.0[0m
+[0;32mI (581) wifi:config NVS flash: enabled[0m
+[0;32mI (581) wifi:config nano formatting: disabled[0m
+[0;32mI (591) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (591) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (601) wifi:Init management short buffer num: 32[0m
+[0;32mI (601) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (611) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (611) wifi:Init static rx buffer num: 10[0m
+[0;32mI (611) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (621) wifi_init: rx ba win: 6[0m
+[0;32mI (621) wifi_init: accept mbox: 6[0m
+[0;32mI (621) wifi_init: tcpip mbox: 32[0m
+[0;32mI (631) wifi_init: udp mbox: 6[0m
+[0;32mI (631) wifi_init: tcp mbox: 6[0m
+[0;32mI (631) wifi_init: tcp tx win: 5760[0m
+[0;32mI (641) wifi_init: tcp rx win: 5760[0m
+[0;32mI (641) wifi_init: tcp mss: 1440[0m
+[0;32mI (641) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (651) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (651) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (741) wifi:mode : softAP (8c:4f:00:12:4c:dd)[0m
+[0;32mI (741) wifi:Total power save buffer number: 16[0m
+[0;32mI (741) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (741) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (751) wifi_ap: AP started with SSID: TemperatureController[0m
+[0;32mI (751) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (761) main_task: Returned from app_main()[0m
+[0;32mI (1711) wifi:new:<1,1>, old:<1,1>, ap:<1,1>, sta:<255,255>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1711) wifi:station: 40:a1:08:20:ce:d8 join, AID=1, bgn, 40U[0m
+[0;32mI (2131) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (2971) wifi:<ba-add>idx:2 (ifx:1, 40:a1:08:20:ce:d8), tid:0, ssn:34, winSize:64[0m
+[0;33mW (11871) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (11881) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (11961) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (11961) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (14711) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (14711) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (17521) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (17521) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (20531) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (20531) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (23531) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (23531) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (25121) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (25121) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (28101) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (28101) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (31111) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (31111) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (34131) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (34131) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (37141) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (37141) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (40101) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (40111) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (43181) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (43181) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (46111) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (46111) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (49111) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (49111) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (52111) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (52111) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (55131) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (55131) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (58111) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (58111) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (61111) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (61111) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (64331) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (64331) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (67111) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (67111) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (70111) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (70111) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (73141) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (73141) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (76101) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (76111) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (79111) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (79111) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (82111) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (82111) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (85111) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (85111) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (88111) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (88111) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (91111) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (91111) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (94141) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (94141) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (97111) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (97111) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (100111) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (100111) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (103111) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (103111) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (106111) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (106111) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (109121) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (109121) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (112111) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (112111) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (115121) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (115131) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (118111) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (118111) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (121111) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (121111) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (124131) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (124131) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (127111) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (127111) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (130121) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (130121) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (133111) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (133111) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (136111) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (136111) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (139111) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (139111) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (142111) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (142111) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (145111) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (145111) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (155851) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (155851) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (162901) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (162901) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (165871) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (165871) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (173391) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (173401) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (176161) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (176161) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (178971) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (178971) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (181741) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (181741) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (184741) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (184741) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (187741) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (187741) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (190751) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (190751) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (193751) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (193751) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (196741) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (196741) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (199741) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (199741) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (202741) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (202741) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (205741) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (205741) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (208831) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (208831) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (211741) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (211741) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (214761) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (214761) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (217851) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (217851) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (220741) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (220741) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (223751) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (223751) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (226741) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (226741) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (229781) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (229781) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (232741) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (232741) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (235741) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (235741) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (238741) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (238741) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (241741) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (241741) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (244751) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (244751) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (247741) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (247741) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (250831) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (250831) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (253741) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (253741) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (256811) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (256811) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (259831) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (259831) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (262761) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (262771) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (266061) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (266061) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (269051) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (269051) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (271811) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (271811) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (274751) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (274751) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (278051) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (278051) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (280741) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (280741) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (283741) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (283741) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (286741) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (286741) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (290061) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (290061) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (293061) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (293061) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (295741) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (295741) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (298741) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (298741) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (301741) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (301741) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (304731) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (304741) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (307741) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (307741) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (310741) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (310741) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (313831) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (313831) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (317131) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (317131) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (319731) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (319731) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (323341) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (323341) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (325731) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (325741) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (328751) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (328751) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (331731) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (331731) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (334741) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (334741) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (337741) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (337741) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (340741) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (340741) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (343821) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (343821) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (347051) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (347051) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (349741) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (349741) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (353221) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (353221) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (355751) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (355751) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (359051) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (359061) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (361741) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (361741) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (364741) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (364741) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (367741) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (367741) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (370741) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (370741) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (373751) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (373751) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (376731) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (376731) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (379741) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (379741) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (382731) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (382731) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (385751) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (385751) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (388731) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (388731) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (391941) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (391941) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m

@@ -1,0 +1,13 @@
+/home/pi/httptc/main/httptc.c: In function 'fan_control_task':
+/home/pi/httptc/main/httptc.c:36:32: error: 'FAN_GPIO' undeclared (first use in this function)
+   36 |                 gpio_set_level(FAN_GPIO, 1);
+      |                                ^~~~~~~~
+/home/pi/httptc/main/httptc.c:36:32: note: each undeclared identifier is reported only once for each function it appears in
+/home/pi/httptc/main/httptc.c:37:17: error: implicit declaration of function 'ESP_LOGI'; did you mean 'ESP_OK'? [-Wimplicit-function-declaration]
+   37 |                 ESP_LOGI("FAN", "Fan turned ON");
+      |                 ^~~~~~~~
+      |                 ESP_OK
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:82: esp-idf/main/CMakeFiles/__idf_main.dir/httptc.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:6135: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [Makefile:149: all] Error 2

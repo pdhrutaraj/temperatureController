@@ -1,0 +1,9 @@
+/home/pi/httptc/main/web_server.c: In function 'status_get':
+/home/pi/httptc/main/web_server.c:125:26: error: 'fan_on' undeclared (first use in this function)
+  125 |     const char *status = fan_on ? "ON" : "OFF";
+      |                          ^~~~~~
+/home/pi/httptc/main/web_server.c:125:26: note: each undeclared identifier is reported only once for each function it appears in
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:134: esp-idf/main/CMakeFiles/__idf_main.dir/web_server.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:6135: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [Makefile:149: all] Error 2

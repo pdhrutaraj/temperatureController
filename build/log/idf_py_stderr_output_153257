@@ -1,0 +1,4 @@
+/home/pi/httptc/main/nvs_store.c: In function 'load_config_from_nvs':
+/home/pi/httptc/main/nvs_store.c:20:12: warning: unused variable 'len' [-Wunused-variable]
+   20 |     size_t len;
+      |            ^~~

@@ -79,15 +79,15 @@ include esp-idf/esp_app_format/CMakeFiles/__idf_esp_app_format.dir/flags.make
 esp-idf/esp_app_format/CMakeFiles/__idf_esp_app_format.dir/esp_app_desc.c.obj: esp-idf/esp_app_format/CMakeFiles/__idf_esp_app_format.dir/flags.make
 esp-idf/esp_app_format/CMakeFiles/__idf_esp_app_format.dir/esp_app_desc.c.obj: /home/pi/esp32/esp-idf/components/esp_app_format/esp_app_desc.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/httptc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/esp_app_format/CMakeFiles/__idf_esp_app_format.dir/esp_app_desc.c.obj"
-	cd /home/pi/httptc/build/esp-idf/esp_app_format && /home/pi/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) -D PROJECT_NAME=\"httptc\" -DPROJECT_VER=\"1\" $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/__idf_esp_app_format.dir/esp_app_desc.c.obj -c /home/pi/esp32/esp-idf/components/esp_app_format/esp_app_desc.c
+	cd /home/pi/httptc/build/esp-idf/esp_app_format && /home/pi/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) -D PROJECT_NAME=\"httptc\" -DPROJECT_VER=\"3f2a030-dirty\" $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/__idf_esp_app_format.dir/esp_app_desc.c.obj -c /home/pi/esp32/esp-idf/components/esp_app_format/esp_app_desc.c
 
 esp-idf/esp_app_format/CMakeFiles/__idf_esp_app_format.dir/esp_app_desc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_esp_app_format.dir/esp_app_desc.c.i"
-	cd /home/pi/httptc/build/esp-idf/esp_app_format && /home/pi/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) -D PROJECT_NAME=\"httptc\" -DPROJECT_VER=\"1\" $(C_INCLUDES) $(C_FLAGS) -E /home/pi/esp32/esp-idf/components/esp_app_format/esp_app_desc.c > CMakeFiles/__idf_esp_app_format.dir/esp_app_desc.c.i
+	cd /home/pi/httptc/build/esp-idf/esp_app_format && /home/pi/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) -D PROJECT_NAME=\"httptc\" -DPROJECT_VER=\"3f2a030-dirty\" $(C_INCLUDES) $(C_FLAGS) -E /home/pi/esp32/esp-idf/components/esp_app_format/esp_app_desc.c > CMakeFiles/__idf_esp_app_format.dir/esp_app_desc.c.i
 
 esp-idf/esp_app_format/CMakeFiles/__idf_esp_app_format.dir/esp_app_desc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_esp_app_format.dir/esp_app_desc.c.s"
-	cd /home/pi/httptc/build/esp-idf/esp_app_format && /home/pi/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) -D PROJECT_NAME=\"httptc\" -DPROJECT_VER=\"1\" $(C_INCLUDES) $(C_FLAGS) -S /home/pi/esp32/esp-idf/components/esp_app_format/esp_app_desc.c -o CMakeFiles/__idf_esp_app_format.dir/esp_app_desc.c.s
+	cd /home/pi/httptc/build/esp-idf/esp_app_format && /home/pi/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $(C_DEFINES) -D PROJECT_NAME=\"httptc\" -DPROJECT_VER=\"3f2a030-dirty\" $(C_INCLUDES) $(C_FLAGS) -S /home/pi/esp32/esp-idf/components/esp_app_format/esp_app_desc.c -o CMakeFiles/__idf_esp_app_format.dir/esp_app_desc.c.s
 
 # Object files for target __idf_esp_app_format
 __idf_esp_app_format_OBJECTS = \

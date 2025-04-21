@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "httptc",
-    "project_version":    "1",
+    "project_version":    "3f2a030-dirty",
     "project_path":       "/home/pi/httptc",
     "idf_path":           "/home/pi/esp32/esp-idf",
     "build_dir":          "/home/pi/httptc/build",

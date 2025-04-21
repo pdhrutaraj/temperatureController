@@ -1,0 +1,15 @@
+/home/pi/httptc/main/web_server.c:13:17: warning: 'output_delay_ms' initialized and declared 'extern'
+   13 | extern uint32_t output_delay_ms = 1000;
+      |                 ^~~~~~~~~~~~~~~
+/home/pi/httptc/main/web_server.c:104:6: error: conflicting types for 'start_webserver'; have 'void(void)'
+  104 | void start_webserver(void) {
+      |      ^~~~~~~~~~~~~~~
+In file included from /home/pi/httptc/main/web_server.c:1:
+/home/pi/httptc/main/web_server.h:6:16: note: previous declaration of 'start_webserver' with type 'void *(void)'
+    6 | httpd_handle_t start_webserver(void);
+      |                ^~~~~~~~~~~~~~~
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:134: esp-idf/main/CMakeFiles/__idf_main.dir/web_server.c.obj] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [CMakeFiles/Makefile2:6135: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [Makefile:149: all] Error 2

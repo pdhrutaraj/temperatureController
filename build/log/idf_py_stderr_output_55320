@@ -1,0 +1,33 @@
+/home/pi/httptc/main/web_server.c:55:14: error: static declaration of 'target_temp' follows non-static declaration
+   55 | static float target_temp = 25.0;
+      |              ^~~~~~~~~~~
+/home/pi/httptc/main/web_server.c:11:14: note: previous declaration of 'target_temp' with type 'float'
+   11 | extern float target_temp;
+      |              ^~~~~~~~~~~
+/home/pi/httptc/main/web_server.c: In function 'temp_post':
+/home/pi/httptc/main/web_server.c:75:5: error: implicit declaration of function 'ESP_LOGI'; did you mean 'ESP_OK'? [-Wimplicit-function-declaration]
+   75 |     ESP_LOGI("POST", "Set target_temp=%.2f, delay=%d", target_temp, output_delay);
+      |     ^~~~~~~~
+      |     ESP_OK
+/home/pi/httptc/main/web_server.c: At top level:
+/home/pi/httptc/main/web_server.c:101:6: error: conflicting types for 'start_webserver'; have 'void(void)'
+  101 | void start_webserver(void) {
+      |      ^~~~~~~~~~~~~~~
+In file included from /home/pi/httptc/main/web_server.c:1:
+/home/pi/httptc/main/web_server.h:6:16: note: previous declaration of 'start_webserver' with type 'void *(void)'
+    6 | httpd_handle_t start_webserver(void);
+      |                ^~~~~~~~~~~~~~~
+/home/pi/httptc/main/web_server.c: In function 'start_webserver':
+/home/pi/httptc/main/web_server.c:109:24: error: 'index_get' undeclared (first use in this function); did you mean 'index_uri'?
+  109 |             .handler = index_get,
+      |                        ^~~~~~~~~
+      |                        index_uri
+/home/pi/httptc/main/web_server.c:109:24: note: each undeclared identifier is reported only once for each function it appears in
+/home/pi/httptc/main/web_server.c: At top level:
+/home/pi/httptc/main/web_server.c:14:20: warning: 'HTML_INDEX' defined but not used [-Wunused-variable]
+   14 | static const char *HTML_INDEX =
+      |                    ^~~~~~~~~~
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:134: esp-idf/main/CMakeFiles/__idf_main.dir/web_server.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:6135: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [Makefile:149: all] Error 2

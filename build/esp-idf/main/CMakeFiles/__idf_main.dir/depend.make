@@ -50,6 +50,13 @@ esp-idf/main/CMakeFiles/__idf_main.dir/httptc.c.obj: /home/pi/esp32/esp-idf/comp
 esp-idf/main/CMakeFiles/__idf_main.dir/httptc.c.obj: /home/pi/esp32/esp-idf/components/heap/include/esp_heap_caps.h
 esp-idf/main/CMakeFiles/__idf_main.dir/httptc.c.obj: /home/pi/esp32/esp-idf/components/heap/include/multi_heap.h
 esp-idf/main/CMakeFiles/__idf_main.dir/httptc.c.obj: /home/pi/esp32/esp-idf/components/http_parser/http_parser.h
+esp-idf/main/CMakeFiles/__idf_main.dir/httptc.c.obj: /home/pi/esp32/esp-idf/components/log/include/esp_log.h
+esp-idf/main/CMakeFiles/__idf_main.dir/httptc.c.obj: /home/pi/esp32/esp-idf/components/log/include/esp_log_buffer.h
+esp-idf/main/CMakeFiles/__idf_main.dir/httptc.c.obj: /home/pi/esp32/esp-idf/components/log/include/esp_log_color.h
+esp-idf/main/CMakeFiles/__idf_main.dir/httptc.c.obj: /home/pi/esp32/esp-idf/components/log/include/esp_log_format.h
+esp-idf/main/CMakeFiles/__idf_main.dir/httptc.c.obj: /home/pi/esp32/esp-idf/components/log/include/esp_log_level.h
+esp-idf/main/CMakeFiles/__idf_main.dir/httptc.c.obj: /home/pi/esp32/esp-idf/components/log/include/esp_log_timestamp.h
+esp-idf/main/CMakeFiles/__idf_main.dir/httptc.c.obj: /home/pi/esp32/esp-idf/components/log/include/esp_log_write.h
 esp-idf/main/CMakeFiles/__idf_main.dir/httptc.c.obj: /home/pi/esp32/esp-idf/components/newlib/platform_include/assert.h
 esp-idf/main/CMakeFiles/__idf_main.dir/httptc.c.obj: /home/pi/esp32/esp-idf/components/newlib/platform_include/esp_newlib.h
 esp-idf/main/CMakeFiles/__idf_main.dir/httptc.c.obj: /home/pi/esp32/esp-idf/components/newlib/platform_include/stdio.h
@@ -259,7 +266,6 @@ esp-idf/main/CMakeFiles/__idf_main.dir/web_server.c.obj: /home/pi/esp32/esp-idf/
 esp-idf/main/CMakeFiles/__idf_main.dir/web_server.c.obj: /home/pi/esp32/esp-idf/components/xtensa/include/xtensa_context.h
 esp-idf/main/CMakeFiles/__idf_main.dir/web_server.c.obj: ../main/nvs_store.h
 esp-idf/main/CMakeFiles/__idf_main.dir/web_server.c.obj: ../main/web_server.c
-esp-idf/main/CMakeFiles/__idf_main.dir/web_server.c.obj: ../main/web_server.h
 esp-idf/main/CMakeFiles/__idf_main.dir/web_server.c.obj: config/sdkconfig.h
 
 esp-idf/main/CMakeFiles/__idf_main.dir/wifi_ap.c.obj: /home/pi/esp32/esp-idf/components/esp_common/include/esp_assert.h

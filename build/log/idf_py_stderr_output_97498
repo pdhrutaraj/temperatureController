@@ -1,0 +1,11 @@
+/home/pi/httptc/main/web_server.c:148:6: error: conflicting types for 'start_webserver'; have 'void(void)'
+  148 | void start_webserver(void) {
+      |      ^~~~~~~~~~~~~~~
+In file included from /home/pi/httptc/main/web_server.c:1:
+/home/pi/httptc/main/web_server.h:6:16: note: previous declaration of 'start_webserver' with type 'void *(void)'
+    6 | httpd_handle_t start_webserver(void);
+      |                ^~~~~~~~~~~~~~~
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:134: esp-idf/main/CMakeFiles/__idf_main.dir/web_server.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:6135: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [Makefile:149: all] Error 2

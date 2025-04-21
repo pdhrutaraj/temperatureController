@@ -1,0 +1,14 @@
+/home/pi/httptc/main/nvs_store.c: In function 'save_config_to_nvs':
+/home/pi/httptc/main/nvs_store.c:9:28: error: 'temp' undeclared (first use in this function)
+    9 |         memcpy(&temp_bits,&temp,sizeof(temp_bits));
+      |                            ^~~~
+/home/pi/httptc/main/nvs_store.c:9:28: note: each undeclared identifier is reported only once for each function it appears in
+/home/pi/httptc/main/nvs_store.c: In function 'load_config_from_nvs':
+/home/pi/httptc/main/nvs_store.c:22:12: warning: unused variable 'len' [-Wunused-variable]
+   22 |     size_t len;
+      |            ^~~
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:108: esp-idf/main/CMakeFiles/__idf_main.dir/nvs_store.c.obj] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [CMakeFiles/Makefile2:6135: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [Makefile:149: all] Error 2
