@@ -14,8 +14,7 @@
 
 bool relay_on = false;
 float current_temp = 0.0;
-float target_temp = 30.0;
-int output_delay_ms = 100;
+float target_temp = 0.0;
 
 void temperature_task(void *pv) {
     float temp;
@@ -30,19 +29,20 @@ void temperature_task(void *pv) {
 		    relay_on = false;
 	    }
 	}
-        vTaskDelay(pdMS_TO_TICKS(output_delay_ms));
+        vTaskDelay(pdMS_TO_TICKS(100));
     }
 }
 
 void app_main(void) {
     nvs_flash_init();
-    //load_target_temp(&target_temp,&output_delay_ms);
-    load_config_from_nvs(&target_temp,&output_delay_ms);
+    
+    load_config_from_nvs(&target_temp);
+    
     mlx90614_init();
     wifi_init_softap();
     start_webserver();
 
-    gpio_set_direction(RELAY_GPIO, GPIO_MODE_OUTPUT);  // Set GPIO2 as output
+    gpio_set_direction(RELAY_GPIO, GPIO_MODE_OUTPUT);  
     xTaskCreate(temperature_task, "temp_task", 4096, NULL, 5, NULL);
     
 }
