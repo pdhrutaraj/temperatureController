@@ -9,7 +9,6 @@
 
 extern float current_temp;
 extern float target_temp;
-extern uint32_t output_delay_ms;
 extern bool relay_on;
 
 static const char *index_html =
@@ -33,22 +32,19 @@ static const char *index_html =
 "<body><div class=\"container\">"
 "<h1>Temperature Controller</h1>"
 "<div class=\"temp-display\" id=\"temp\">-- °C</div>"
-"<div class=\"status-display\" id=\"fan-status\">Output Relay Status : --</div>"
+"<div class=\"status-display\" id=\"relay-status\">Output Relay Status : --</div>"
 "<form id=\"temp-form\">"
 "<div><label for=\"target\">Set Target Temperature</label>"
-"<input type=\"number\" step=\"0.1\" id=\"target\" name=\"target\" required></div>"
-"<div><label for=\"delay\">Output Delay (ms)</label>"
-"<input type=\"number\" id=\"delay\" name=\"delay\" required></div>"
+"<input type=\"number\" step=\"0.1\" id=\"target\" name=\"target\" value=\"%.2f\" required></div>"
 "<button type=\"submit\">Update Settings</button></form>"
 "<div class=\"toast\" id=\"toast\">Settings Updated!</div></div>"
 "<script>"
 "function fetchTemp(){fetch(\"/data\").then(res=>res.json()).then(data=>{document.getElementById(\"temp\").innerText=`${data.temp} °C`;});}"
-"function fetchStatus(){fetch(\"/status\").then(res=>res.json()).then(data=>{document.getElementById(\"fan-status\").innerText=`Output Relay : ${data.relay_on}`;});}"
+"function fetchStatus(){fetch(\"/status\").then(res=>res.json()).then(data=>{document.getElementById(\"relay-status\").innerText=`Output Relay : ${data.relay_on}`;});}"
 "document.getElementById(\"temp-form\").addEventListener(\"submit\",function(e){e.preventDefault();"
 "const target=document.getElementById(\"target\").value;"
-"const delay=document.getElementById(\"delay\").value;"
 "fetch(\"/set\",{method:\"POST\",headers:{\"Content-Type\":\"application/x-www-form-urlencoded\"},"
-"body:`target=${target}&delay=${delay}`})"
+"body:`target=${target}`})"
 ".then(()=>{document.getElementById(\"toast\").style.display=\"block\";setTimeout(()=>document.getElementById(\"toast\").style.display=\"none\",2000);});});"
 "fetchTemp();fetchStatus();setInterval(fetchTemp,100);setInterval(fetchStatus,100);"
 "</script></body></html>";
@@ -72,7 +68,7 @@ esp_err_t temp_post(httpd_req_t *req) {
 }
 */
 
-//updated temp_post
+//save target to nvs
 
 esp_err_t temp_post(httpd_req_t *req) {
     char buf[100];
@@ -82,33 +78,35 @@ esp_err_t temp_post(httpd_req_t *req) {
     buf[ret] = '\0';
 
     char *target_str = strstr(buf, "target=");
-    char *delay_str = strstr(buf, "delay=");
-//    if (target_str) {
-        target_temp = atof(target_str + 7);
-//    }
-//    if (delay_str) {
-        output_delay_ms = atoi(delay_str + 6);
-//    }
-      //dave to nvs
-      save_config_to_nvs(target_temp,output_delay_ms);
-    //ESP_LOGI("POST", "Set target_temp=%.2f, delay=%d", target_temp, output_delay);
 
+    if (target_str) {
+        target_temp = atof(target_str + 7);
+	//save to nvs
+	save_config_to_nvs(target_temp);
+    }
+    
     httpd_resp_sendstr(req, "OK");
     return ESP_OK;
 }
+//get target from nvs
 
-/*
-esp_err_t data_get(httpd_req_t *req) {
-    char resp[100];
-    snprintf(resp, sizeof(resp),
-             "{\"temp\":%.2f,\"fan\":\"%s\"}",
-             current_temp, current_temp > target_temp ? "ON" : "OFF");
-    httpd_resp_set_type(req, "application/json");
+esp_err_t get_target_handler(httpd_req_t *req) {
+   /* 
+    nvs_handle_t nvs_handle;
+    if (nvs_open("storage", NVS_READONLY, &nvs) == ESP_OK) {
+        nvs_get_i32(nvs, "target_temp", &target_temp);
+        nvs_close(nvs_handle);
+    }
+    */
+    load_config_from_nvs(&target_temp);
+    char resp[32];
+    snprintf(resp, sizeof(resp), "%.2f", (float)target_temp);
+    httpd_resp_set_type(req, "text/plain");
     httpd_resp_send(req, resp, HTTPD_RESP_USE_STRLEN);
     return ESP_OK;
 }
-*/
-//updated data_get for temp
+
+//updated data_get for current_temp
 esp_err_t data_get(httpd_req_t *req) {
     char resp[64];
     snprintf(resp, sizeof(resp), "{\"temp\": %.2f}", current_temp);
@@ -117,7 +115,6 @@ esp_err_t data_get(httpd_req_t *req) {
     return ESP_OK;
 }
 //relay status get
-//
 
 esp_err_t status_get(httpd_req_t *req) {
     const char *status = relay_on ? "ON" : "OFF";
@@ -128,21 +125,6 @@ esp_err_t status_get(httpd_req_t *req) {
     return ESP_OK;
 }
 
-//
-/*
-httpd_handle_t start_webserver(void) {
-    httpd_config_t config = HTTPD_DEFAULT_CONFIG();
-    httpd_handle_t server = NULL;
-    if (httpd_start(&server, &config) == ESP_OK) {
-        httpd_register_uri_handler(server, &(httpd_uri_t){"/", HTTP_GET, index_get});
-        httpd_register_uri_handler(server, &(httpd_uri_t){"/set", HTTP_POST, temp_post});
-        httpd_register_uri_handler(server, &(httpd_uri_t){"/data", HTTP_GET, data_get});
-    }
-    return server;
-}
-*/
-//updated start_webserver
-//
 void start_webserver(void) {
     httpd_config_t config = HTTPD_DEFAULT_CONFIG();
     httpd_handle_t server = NULL;
@@ -179,5 +161,16 @@ void start_webserver(void) {
             .user_ctx = NULL
         };
         httpd_register_uri_handler(server, &status_uri);
+	//get target temp
+	httpd_uri_t get_target_uri = {
+            .uri       = "/target",
+            .method    = HTTP_GET,
+            .handler   = get_target_handler,
+            .user_ctx  = NULL
+       };
+       httpd_register_uri_handler(server, &get_target_uri);
+
+	//
     }
 }
+
