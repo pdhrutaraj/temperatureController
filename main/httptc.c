@@ -19,7 +19,8 @@ float current_temp = 0.0;
 float target_temp = 0.0;
 uint32_t output_delay_ms = 0;
 uint32_t output_hold_delay = 500;
-int bottle_sense_gpio_level = 0;
+int bottle_sense_gpio_level = 1;
+bool bottle_sense = false;
 
 void temperature_task(void *pv) {
     float temp;
@@ -27,8 +28,12 @@ void temperature_task(void *pv) {
         if (mlx90614_read_temp(&temp) == ESP_OK) {
             current_temp = temp;
 	    bottle_sense_gpio_level = gpio_get_level(BOTTLE_SENSE_GPIO);
-	    //ESP_LOGI("temp_task","bottle_sense_gpio_level : %d",bottle_sense_gpio_level);
-	    if ((current_temp >= target_temp) && (bottle_sense_gpio_level == 0)) {
+	   if(bottle_sense_gpio_level == 0){
+		    bottle_sense = true;
+	    }
+
+	    if ((current_temp >= target_temp) && (bottle_sense == true)) {
+		bottle_sense = false;
 	    	//gpio_set_level(RELAY_GPIO,1);
 	    	gpio_set_level(RELAY_GPIO,0);
         	vTaskDelay(pdMS_TO_TICKS(output_delay_ms));
@@ -36,15 +41,19 @@ void temperature_task(void *pv) {
 	    	gpio_set_level(OUTPUT_DELAY_GPIO,0);
 		//relay_on = true;
 		relay_on = false;
+		
 	    } else {
 	    	    //gpio_set_level(RELAY_GPIO,0);
+		    bottle_sense = false;
 	    	    gpio_set_level(RELAY_GPIO,1);
 	    	    //gpio_set_level(OUTPUT_DELAY_GPIO,0);
 	    	    gpio_set_level(OUTPUT_DELAY_GPIO,1);
 		    //relay_on = false;
 		    relay_on = true;
+		    
 	    }
 	}
+	
         vTaskDelay(pdMS_TO_TICKS(output_hold_delay));
     }
 }
